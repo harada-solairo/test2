@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: test
-  password: password
-  host: test.cpuptgi7sloz.us-west-2.rds.amazonaws.com 
+  username: <%= ENV['TEST2_DATABASE_USER'] %>
+  password: <%= ENV['TEST2_DATABASE_PASSWORD'] %>
+  host:     <%= ENV['TEST2_DATABASE_HOST'] %> 
 
 development:
   <<: *default
